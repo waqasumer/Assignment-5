@@ -13,7 +13,6 @@ alert("Welcome to JS Land...\nHappy Coding!");
 alert("Welcome to JS Land...");
 alert("Happy Coding!");
 
-
 //Task 5
 alert ("Hello... I  can run JS through my web browser's console"); // run in browser console and working fine.
 
@@ -431,27 +430,49 @@ else {
 }
 
 //Task 5 a
-let a = 4; if (++a === 5) { alert("given condition for letiable a is true"); } // Output is given condition for letiable a is true;
+let a = 4; if (++a === 5) { 
+    alert("given condition for letiable a is true"); 
+} // Output is given condition for letiable a is true;
 
 // //Task 5 b
-let b = 82; if (b++ === 83) { alert("given condition for letiable b is true"); } // No Output (Undefined)
+let b = 82; if (b++ === 83) { 
+    alert("given condition for letiable b is true"); 
+} // No Output (Undefined)
 
 // //Task 5 c
-let c = 12; if (c++ === 13) { alert("condition 1 is true"); } if (c === 13) { alert("condition 2 is true"); } if (++c < 14) { alert("condition 3 is true"); } if (c === 14) { alert("condition 4 is true"); }
-
+let c = 12; if (c++ === 13) { 
+    alert("condition 1 is true"); 
+} if (c === 13) { 
+    alert("condition 2 is true");
+} if (++c < 14) { 
+    alert("condition 3 is true"); 
+} if (c === 14) {
+    alert("condition 4 is true"); 
+}
 // // coniditon 2 is true
 // // condition 4 is true
 
 //Task 5 d
-let materialCost = 20000; let laborCost = 2000; let totalCost = materialCost + laborCost; if (totalCost === laborCost + materialCost) { alert("The cost equals"); }
-
+let materialCost = 20000; 
+let laborCost = 2000; 
+let totalCost = materialCost + laborCost; 
+if (totalCost === laborCost + materialCost) { 
+    alert("The cost equals"); 
+}
 // The cost equals
 
 //Task 5 e  
-if (true) { alert("True"); } if (false) { alert("False"); } // True
+if (true) { 
+    alert("True"); 
+} if (false) { 
+    alert("False"); 
+} // True
 
-//Task f
-if ("car" < "cat") { alert("car is smaller than cat"); } // Car is smaller than cat
+//Task 5 f
+if ("car" < "cat") { 
+    alert("car is smaller than cat"); 
+} 
+// Car is smaller than cat
 
 //Task 6
 let enterMarksObtained1 = +prompt("Enter marks obtained in Subject 1");
@@ -815,14 +836,12 @@ document.write(arr2.pop() + "<br>");
 document.write(arr2.pop() + "<br>");
 
 //Task 15
-var mobileBrands = ["Apple", "Sasmsung", "Motorola", "Nokia", "Sony", "Haier"];
 document.write("<select>");
-document.write("<option>" + mobileBrands[0] + "</option>");
-document.write("<option>" + mobileBrands[1] + "</option>");
-document.write("<option>" + mobileBrands[2] + "</option>");
-document.write("<option>" + mobileBrands[3] + "</option>");
-document.write("<option>" + mobileBrands[4] + "</option>");
-document.write("<option>" + mobileBrands[5] + "</option>");
+var mobileBrands = ["Apple", "Sasmsung", "Motorola", "Nokia", "Sony", "Haier"];
+for (var i =0; i < mobileBrands.length; i++) {
+    document.write("<option>" + mobileBrands[i] + "</option>");
+
+}
 document.write("</select>");
 
 // ****************************** Chapter 17 - 20 ******************************
