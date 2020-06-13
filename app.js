@@ -387,27 +387,37 @@ if (gender == "Male" || gender == "male") {
 }
 
 //Task 3
-document.write("<br><br>" + "<b>Single Color</b>" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "<b>Message</b>" + "<br>");
-
 let color = prompt("Enter Trafiic Color");
 
+document.write("<br><br>" + "<table border=2px>");
+document.write("<tr>");
+document.write("<td>" + "<h4>Signal Color</h4>" + "</td>");
+document.write("<td>" + "<h4>Message</h4>" + "</td>");
+document.write("</tr>");
+
 if (color == "Red" || color == "red") {
-    document.write(color + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Must Stop");
-}
+    document.write("<tr>");
+    document.write("<td>" + color + "</td>");
+    document.write("<td>" + "Must Stop" + "</td>");
+    document.write("</tr>");
 
-else if (color == "Yellow" || color == "yellow") {
-    document.write(color + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Ready to Move");
+} else if (color == "Yellow" || color == "yellow") {
+    document.write("<tr>");
+    document.write("<td>" + color + "</td>");
+    document.write("<td>" + "Ready to move" + "</td>");
+    document.write("</tr>");
 
-}
-
-else if (color == "Green" || color == "green") {
-    document.write(color + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Move now");
-
-}
-
-else {
+} else if (color == "Green" || color == "green") {
+    document.write("<tr>");
+    document.write("<td>" + color + "</td>");
+    document.write("<td>" + "Move now" + "</td>");
+    document.write("</tr>");
+} else {
     alert("No color found");
 }
+
+document.write("</tr>");
+document.write("</table>");
 
 //Task 4
 let fuel = +prompt("Enter Fuel");
@@ -711,21 +721,47 @@ var assumíngMarks = 500;
 
 for (var i=0; i < studentNamesArray.length; i++) {
     for (var j=0; j < studentScoreArray.length; j++);
-    var calc = 100 * studentScoreArray [i] / assumíngMarks;
+    var calc = 100 * studentScoreArray[i] / assumíngMarks;
     document.write("<br>" + "Score of " + studentNamesArray[i] + "is " +studentScoreArray[i] + "." + "Percentage is " + calc + "%");
 }
 document.write("<br><br>");
 
-//Task 9 a // b // c // d // e // f // g
-var colorsArray = ["Blue", "Red", "Purple", "Green"];
+//Task 9
+var colorsArray = ['Blue', 'Red', 'Blue', 'Purple', 'Green'];
+document.write("<b>Default Colors in Array : </b>" + colorsArray + "<br><br>");
 
-colorsArray.unshift("Black"); //Add color in beginning
-colorsArray.push("Purple"); // Add color in end
-colorsArray.shift(); //Delete fist color from Array
-colorsArray.pop(); //Delete last color from Array
-colorsArray.splice(2, 0, "Gray"); // Add color on specific index 
-colorsArray.splice(2, 1); // Delete color on specific index 
-document.write(colorsArray + "<br><br>");
+var addColorInBeginning = prompt("Which color do you like to add to the beginning?");
+colorsArray.unshift(addColorInBeginning);
+document.write("<b>Color Added to the Beginning : </b>" + colorsArray + "<br><br>");
+
+var addColorInEnd = prompt("Which color do you like to add to the End?");
+colorsArray.push(addColorInEnd);
+document.write("<b>Color Added to the End : </b>" + colorsArray + "<br><br>");
+
+var addTwoMoreColors1 = prompt("Enter two more colors to the beginning? Enter your first color?");
+colorsArray.unshift(addTwoMoreColors1);
+
+var addTwoMoreColors2 = prompt("Enter two more colors to the beginning? Enter your second color?");
+colorsArray.unshift(addTwoMoreColors2);
+document.write("<b>Two more colors added to the Beginning : </b>" + colorsArray + "<br><br>");
+
+colorsArray.shift();
+document.write("<b>First color deleted : </b>" + colorsArray + "<br><br>");
+
+colorsArray.pop();
+document.write("<b>Last color deleted : </b>" + colorsArray + "<br><br>");
+
+var addColoronSpecficIndex = +prompt("Enter the index at which you want to add the color?");
+var colorstobeAdded = prompt("Enter the name of color which you want to add on specific index");
+var changetoStr = colorstobeAdded.toString();
+colorsArray.splice(addColoronSpecficIndex, 0, changetoStr);
+document.write("<b>The color " + changetoStr +  " is added on specified index : </b>" + colorsArray + "<br><br>");
+
+
+var deleteColoronSpecficIndex = +prompt("Enter the index at which you want to delete the color?");
+var colorstobeDeleted = +prompt("How many colors do you want to delete?");
+colorsArray.splice(deleteColoronSpecficIndex, colorstobeDeleted);
+document.write("<b>The color is deleted from specified index : </b>" + colorsArray + "<br><br>");
 
 //Task 10
 var scoreofStudents = [320, 230, 480, 120];
