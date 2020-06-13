@@ -795,8 +795,8 @@ document.write("Ordered Scores of student : " + orderedScoreOfStudents);
 //Task 11
 var citiesList = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
 document.write("<br><br>" + "Cities List" + "<br>" + citiesList);
-var selectedCities = citiesList.slice(0, 1);
-document.write("<br><br>" + "Selected Cities : " + "<br>" + selectedCities);
+var selectedCities = citiesList.slice(0, 3);
+document.write("<br><br>" + "Selected Cities List : " + "<br>" + selectedCities);
 
 //Task 12
 document.write("<br><br>");
